@@ -1,0 +1,175 @@
+<div class="main-content">
+    <div class="container-fluid">
+      
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="card card-stats">
+              <div class="card-header card-header-icon card-header-success">
+                <div class="card-icon">
+                  <i class="material-icons">add</i>
+                </div>
+                <p class="card-category">Novos Lançamentos</p>
+                <h3 class="card-title">3</h3>
+              </div>
+              <div class="card-body">
+                <a class="text-primary" href="#"><i class="material-icons">apps</i> Em Lote</a> &nbsp;&nbsp;&nbsp;
+                <a class="text-primary" href="#"><i class="material-icons">content_paste</i> Individual</a>               
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="material-icons">date_range</i> Nas Ultimas 24 horas
+                </div>
+              </div>            
+          </div>
+      </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="card card-stats">
+            <div class="card-header card-header-info card-header-icon">
+              <div class="card-icon">
+                <i class="material-icons">done_all</i>
+              </div>
+              <p class="card-category">Lançamentos Efetivados</p>
+              <h3 class="card-title">75.521</h3>
+            </div>
+            <div class="card-body">
+              <a class="text-primary" href="#"><i class="material-icons">search</i> Detalhar</a>            
+            </div>
+            <div class="card-footer">
+              <div class="stats">
+                <i class="material-icons">date_range</i> Ultimos 7 dias
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="card card-stats">
+            <div class="card-header card-header-danger card-header-icon">
+              <div class="card-icon">
+                <i class="material-icons">info</i>
+              </div>
+              <p class="card-category">Minhas Pendencias</p>
+              <h3 class="card-title">17</h3>
+            </div>
+            <div class="card-body">
+              <a class="text-primary" href="#"><i class="material-icons">search</i> Detalhar</a>            
+            </div>
+            <div class="card-footer">
+              <div class="stats">
+                <i class="material-icons">update</i> Atualizado
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="card card-stats">
+            <div class="card-header card-header-warning card-header-icon">
+              <div class="card-icon">
+                <i class="material-icons">help</i>
+              </div>
+              <p class="card-category">Solicitações Pendentes</p>
+              <h3 class="card-title">8</h3>
+            </div>
+            <div class="card-body">
+              <a class="text-primary" href="#"><i class="material-icons">search</i> Detalhar</a>            
+            </div>
+            <div class="card-footer">
+              <div class="stats">
+                <i class="material-icons">update</i> Atualizado
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-4">
+          <div class="card card-chart">
+            <div class="card-header card-header-success" data-header-animation="true">
+              <div class="ct-chart" id="dailySalesChart"></div>
+            </div>
+            <div class="card-body">
+              <div class="card-actions">
+                <button mat-raised-button type="button" class="btn btn-danger btn-link fix-broken-card">
+                  <i class="material-icons">build</i> Fix Header!
+                </button>
+                <button mat-raised-button type="button" class="btn btn-info btn-link" matTooltip="Refresh" [matTooltipPosition]="'below'">
+                  <i class="material-icons">refresh</i>
+                </button>
+                <button mat-raised-button type="button" class="btn btn-default btn-link" matTooltip="Change Date" [matTooltipPosition]="'below'">
+                  <i class="material-icons">edit</i>
+                </button>
+              </div>
+              <h4 class="card-title">Lançamentos Por Dia</h4>
+              <p class="card-category">
+                <br/>
+            </div>
+            <div class="card-footer">
+              <div class="stats">
+                <i class="material-icons">date_range</i> Ultimos 7 dias
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-chart">
+            <div class="card-header card-header-info" data-header-animation="true">
+              <div class="ct-chart" id="websiteViewsChart"></div>
+            </div>
+            <div class="card-body">
+              <div class="card-actions">
+                <button mat-raised-button type="button" class="btn btn-danger btn-link fix-broken-card">
+                  <i class="material-icons">build</i> Fix Header!
+                </button>
+                <button mat-raised-button type="button" class="btn btn-info btn-link" matTooltip="Refresh" [matTooltipPosition]="'below'">
+                  <i class="material-icons">refresh</i>
+                </button>
+                <button mat-raised-button type="button" class="btn btn-default btn-link" matTooltip="Change Date" [matTooltipPosition]="'below'">
+                  <i class="material-icons">edit</i>
+                </button>
+              </div>
+              <h4 class="card-title">Lançamentos Efetivados</h4>
+              <p class="card-category"><br/></p>
+            </div>
+            <div class="card-footer">
+              <div class="stats">
+                <i class="material-icons">date_range</i> Ultimos 12 Mêses
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="card card-chart">
+            <div class="card-header card-header-danger" data-header-animation="true">
+              <div class="ct-chart" id="completedTasksChart"></div>
+            </div>
+            <div class="card-body">
+              <div class="card-actions">
+                <button mat-raised-button type="button" class="btn btn-danger btn-link fix-broken-card">
+                  <i class="material-icons">build</i> Fix Header!
+                </button>
+                <button mat-raised-button type="button" class="btn btn-info btn-link" matTooltip="Refresh" [matTooltipPosition]="'below'">
+                  <i class="material-icons">refresh</i>
+                </button>
+                <button mat-raised-button type="button" class="btn btn-default btn-link" matTooltip="Change Date" [matTooltipPosition]="'below'">
+                  <i class="material-icons">edit</i>
+                </button>
+              </div>
+              <h4 class="card-title">Pendencias Resolvidas</h4>
+              <p class="card-category">Lançamentos pendendes para minha aprovação</p>
+            </div>
+            <div class="card-footer">
+              <div class="stats">
+                <i class="material-icons">date_range</i> Ultimos 7 dias
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      
+      
+    </div>
+</div>
