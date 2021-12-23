@@ -1,88 +1,8 @@
-<div class="main-content">
+<div class="main-content" id="divRowGraficos">
     <div class="container-fluid">
       
-      <div class="row">
-        <div class="col-lg-3 col-md-6 col-sm-6">
-          <div class="card card-stats">
-              <div class="card-header card-header-icon card-header-success">
-                <div class="card-icon">
-                  <i class="material-icons">add</i>
-                </div>
-                <p class="card-category">Novos Lançamentos</p>
-                <h3 class="card-title">3</h3>
-              </div>
-              <div class="card-body">
-                <a class="text-primary" href="#"><i class="material-icons">apps</i> Em Lote</a> &nbsp;&nbsp;&nbsp;
-                <a class="text-primary" href="#"><i class="material-icons">content_paste</i> Individual</a>               
-              </div>
-              <div class="card-footer">
-                <div class="stats">
-                  <i class="material-icons">date_range</i> Nas Ultimas 24 horas
-                </div>
-              </div>            
-          </div>
-      </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
-          <div class="card card-stats">
-            <div class="card-header card-header-info card-header-icon">
-              <div class="card-icon">
-                <i class="material-icons">done_all</i>
-              </div>
-              <p class="card-category">Lançamentos Efetivados</p>
-              <h3 class="card-title">75.521</h3>
-            </div>
-            <div class="card-body">
-              <a class="text-primary" href="#"><i class="material-icons">search</i> Detalhar</a>            
-            </div>
-            <div class="card-footer">
-              <div class="stats">
-                <i class="material-icons">date_range</i> Ultimos 7 dias
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
-          <div class="card card-stats">
-            <div class="card-header card-header-danger card-header-icon">
-              <div class="card-icon">
-                <i class="material-icons">info</i>
-              </div>
-              <p class="card-category">Minhas Pendencias</p>
-              <h3 class="card-title">17</h3>
-            </div>
-            <div class="card-body">
-              <a class="text-primary" href="#"><i class="material-icons">search</i> Detalhar</a>            
-            </div>
-            <div class="card-footer">
-              <div class="stats">
-                <i class="material-icons">update</i> Atualizado
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
-          <div class="card card-stats">
-            <div class="card-header card-header-warning card-header-icon">
-              <div class="card-icon">
-                <i class="material-icons">help</i>
-              </div>
-              <p class="card-category">Solicitações Pendentes</p>
-              <h3 class="card-title">8</h3>
-            </div>
-            <div class="card-body">
-              <a class="text-primary" href="#"><i class="material-icons">search</i> Detalhar</a>            
-            </div>
-            <div class="card-footer">
-              <div class="stats">
-                <i class="material-icons">update</i> Atualizado
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-
+      <!-- Graficos -->
+      <div class="row" #divRowGraficos>
         <div class="col-md-4">
           <div class="card card-chart">
             <div class="card-header card-header-success" data-header-animation="true">
@@ -91,12 +11,12 @@
             <div class="card-body">
               <div class="card-actions">
                 <button mat-raised-button type="button" class="btn btn-danger btn-link fix-broken-card">
-                  <i class="material-icons">build</i> Fix Header!
+                  <i class="material-icons">build</i> Atualizar
                 </button>
-                <button mat-raised-button type="button" class="btn btn-info btn-link" matTooltip="Refresh" [matTooltipPosition]="'below'">
+                <button mat-raised-button type="button" class="btn btn-info btn-link" matTooltip="Atualizar" [matTooltipPosition]="'below'">
                   <i class="material-icons">refresh</i>
                 </button>
-                <button mat-raised-button type="button" class="btn btn-default btn-link" matTooltip="Change Date" [matTooltipPosition]="'below'">
+                <button mat-raised-button type="button" class="btn btn-default btn-link" matTooltip="Mudar Data" [matTooltipPosition]="'below'">
                   <i class="material-icons">edit</i>
                 </button>
               </div>
@@ -120,12 +40,12 @@
             <div class="card-body">
               <div class="card-actions">
                 <button mat-raised-button type="button" class="btn btn-danger btn-link fix-broken-card">
-                  <i class="material-icons">build</i> Fix Header!
+                  <i class="material-icons">build</i> Atualizar
                 </button>
-                <button mat-raised-button type="button" class="btn btn-info btn-link" matTooltip="Refresh" [matTooltipPosition]="'below'">
+                <button mat-raised-button type="button" class="btn btn-info btn-link" matTooltip="Atualizar" [matTooltipPosition]="'below'">
                   <i class="material-icons">refresh</i>
                 </button>
-                <button mat-raised-button type="button" class="btn btn-default btn-link" matTooltip="Change Date" [matTooltipPosition]="'below'">
+                <button mat-raised-button type="button" class="btn btn-default btn-link" matTooltip="Mudar Data" [matTooltipPosition]="'below'">
                   <i class="material-icons">edit</i>
                 </button>
               </div>
@@ -142,23 +62,72 @@
         
         <div class="col-md-4">
           <div class="card card-chart">
-            <div class="card-header card-header-danger" data-header-animation="true">
-              <div class="ct-chart" id="completedTasksChart"></div>
-            </div>
             <div class="card-body">
-              <div class="card-actions">
-                <button mat-raised-button type="button" class="btn btn-danger btn-link fix-broken-card">
-                  <i class="material-icons">build</i> Fix Header!
-                </button>
-                <button mat-raised-button type="button" class="btn btn-info btn-link" matTooltip="Refresh" [matTooltipPosition]="'below'">
-                  <i class="material-icons">refresh</i>
-                </button>
-                <button mat-raised-button type="button" class="btn btn-default btn-link" matTooltip="Change Date" [matTooltipPosition]="'below'">
-                  <i class="material-icons">edit</i>
+              <div id="chartPreferences" class="ct-chart"></div>
+            </div>
+            <div class="card-footer">
+              <div class="row">
+                <div class="col-md-12">
+                  <!--<h6 class="card-category">Legend</h6>-->
+                </div>
+                <div class="col-md-12">
+                  <i class="fa fa-circle text-info"></i> Efetivados
+                  <i class="fa fa-circle text-danger"></i> Rejeitados
+                  <i class="fa fa-circle text-warning"></i> Não Efetivados
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Ações -->
+
+      <div class="row" #divRowAcoes>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="card card-stats">
+              <div class="card-header card-header-icon card-header-success">
+                <div class="card-icon">
+                  <i class="material-icons">add</i>
+                </div>
+                <p class="card-category">Novos Lançamentos</p>
+                <h3 class="card-title">3</h3>
+              </div>
+              <div class="card-body">
+                <!--
+                  <a class="text-primary" href="#"><i class="material-icons">apps</i> Em Lote</a> &nbsp;&nbsp;&nbsp;
+                  <a class="text-primary" href="#"><i class="material-icons">content_paste</i> Individual</a>   
+                -->
+                <button mat-raised-button class="btn btn-success" matTooltip="Em Lote" [matTooltipPosition]="'below'">
+                  <i class="material-icons">apps</i>
+                </button>&nbsp;&nbsp;&nbsp;
+                <button mat-raised-button class="btn btn-success" 
+                  matTooltip="Individual" [matTooltipPosition]="'below'"
+                  [routerLink]="['/dashboard', 'lancamento', 'individual']">
+                  <i class="material-icons">content_paste</i> 
                 </button>
               </div>
-              <h4 class="card-title">Pendencias Resolvidas</h4>
-              <p class="card-category">Lançamentos pendendes para minha aprovação</p>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="material-icons">date_range</i> Nas Ultimas 24 horas
+                </div>
+              </div>            
+          </div>
+      </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="card card-stats">
+            <div class="card-header card-header-info card-header-icon">
+              <div class="card-icon">
+                <i class="material-icons">done_all</i>
+              </div>
+              <p class="card-category">Lançamentos Efetivados</p>
+              <h3 class="card-title">75.521</h3>
+            </div>
+            <div class="card-body">
+              <!--<a class="text-primary" href="#"><i class="material-icons">search</i> Detalhar</a> -->
+              <button mat-raised-button class="btn btn-info" matTooltip="Detalhar" [matTooltipPosition]="'below'">
+                <i class="material-icons">search</i> 
+              </button>            
             </div>
             <div class="card-footer">
               <div class="stats">
@@ -167,9 +136,64 @@
             </div>
           </div>
         </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="card card-stats">
+            <div class="card-header card-header-danger card-header-icon">
+              <div class="card-icon">
+                <i class="material-icons">info</i>
+              </div>
+              <p class="card-category">Minhas Pendencias</p>
+              <h3 class="card-title">17</h3>
+            </div>
+            <div class="card-body">
+              <!--<a class="text-primary" [routerLink]="['/lancamentos', 'pendentes']" ><i class="material-icons">search</i> Detalhar</a>-->
+              <button mat-raised-button class="btn btn-danger" 
+                 matTooltip="Detalhar" [matTooltipPosition]="'below'"
+                [routerLink]="['/dashboard', 'lancamentos', 'pendentes']"
+                (click)="divRowAcoes.scrollIntoView()">
+                <i class="material-icons">search</i> 
+              </button>            
+            </div>
+            <div class="card-footer">
+              <div class="stats">
+                <i class="material-icons">update</i> Atualizado
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="card card-stats">
+            <div class="card-header card-header-warning card-header-icon">
+              <div class="card-icon">
+                <i class="material-icons">help</i>
+              </div>
+              <p class="card-category">Solicitações Pendentes</p>
+              <h3 class="card-title">8</h3>
+            </div>
+            <div class="card-body">
+              <!--<a class="text-primary" href="#"><i class="material-icons">search</i> Detalhar</a> -->
+              <button mat-raised-button class="btn btn-warning"
+              matTooltip="Detalhar" [matTooltipPosition]="'below'"
+              [routerLink]="['/dashboard', 'lancamentos', 'aguardando']">
+                <i class="material-icons">search</i> 
+              </button>             
+            </div>
+            <div class="card-footer">
+              <div class="stats">
+                <i class="material-icons">update</i> Atualizado
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    
       
+      <!-- Router Outlet -->
+      <div #divRowRouterOutlet>
+        <router-outlet></router-outlet>
+      </div>
+
+
       
+
     </div>
 </div>

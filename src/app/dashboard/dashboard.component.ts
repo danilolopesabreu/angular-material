@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { TableData } from '../md/md-table/md-table.component';
 import { LegendItem, ChartType } from '../md/md-chart/md-chart.component';
 
@@ -8,10 +8,25 @@ declare var $: any;
 
 @Component({
   selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html'
+  templateUrl: './dashboard.component.html',
+  styleUrls:['dashboard.css']
 })
 export class DashboardComponent implements OnInit, AfterViewInit {
   // constructor(private navbarTitleService: NavbarTitleService, private notificationService: NotificationService) { }
+
+  scrollTela(el: HTMLElement){
+    let rowGraficos = $('#divRowGraficos');
+    let height = rowGraficos[0].scrollHeight;
+    console.log('height: '+height)
+    //rowGraficos.scrollTop(345);
+    //$('#divRowGraficos').animate({scrollTop: 345},1000);
+    //$.scrollTo( $('#divRowAcoes'), 500); 
+    //$.scrollTo('#divRowAcoes', 800, {easing:'elasout'});
+    //var $target = $('#divRowAcoes');
+    //$target.scrollTo('i', 800);
+    //el.scrollIntoView();
+  }
+
   public tableData: TableData;
   startAnimationForLineChart(chart: any) {
       let seq: any, delays: any, durations: any;
@@ -49,8 +64,8 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   startAnimationForBarChart(chart: any) {
       let seq2: any, delays2: any, durations2: any;
       seq2 = 0;
-      delays2 = 80;
-      durations2 = 500;
+      delays2 = 40;
+      durations2 = 300;
       chart.on('draw', function(data: any) {
         if (data.type === 'bar') {
             seq2++;
@@ -64,8 +79,9 @@ export class DashboardComponent implements OnInit, AfterViewInit {
               }
             });
         }
-      });
 
+      });
+            
       seq2 = 0;
   }
   // constructor(private navbarTitleService: NavbarTitleService) { }
@@ -107,7 +123,8 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       const dataCompletedTasksChart = {
           labels: ['S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
           series: [
-              [12, 7, 14, 3, 11, 9, 10]
+              [12, 7, 14, 3, 11, 9, 10],
+              [9, 7, 4, 5, 6, 7, 8]
           ]
       };
 
@@ -182,7 +199,22 @@ export class DashboardComponent implements OnInit, AfterViewInit {
              alert(message);
          }
       });
+
+       /*  **************** Public Preferences - Pie Chart ******************** */
+
+          const dataPreferences = {
+              labels: ['62%', '32%', '6%'],
+              series: [62, 32, 6]
+          };
+  
+          const optionsPreferences = {
+              height: '212px'
+          };
+  
+          new Chartist.Pie('#chartPreferences', dataPreferences, optionsPreferences);
+  
    }
+
    ngAfterViewInit() {
        const breakCards = true;
        if (breakCards === true) {
@@ -211,5 +243,6 @@ export class DashboardComponent implements OnInit, AfterViewInit {
                });
            });
        }
+       $('div.ct-chart svg g.ct-labels foreignObject span.ct-label.ct-vertical.ct-start').css( "width", "35px" );
    }
 }

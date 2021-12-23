@@ -1,4 +1,4 @@
-<nav #navbar class="navbar navbar-expand-lg navbar-transparent  navbar-absolute">
+<nav #navbar class="navbar navbar-expand-lg navbar-transparent navbar-absolute">
   <div class="container-fluid">
     <div class="navbar-wrapper">
       <div class="navbar-minimize">
@@ -34,12 +34,26 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="material-icons">logout</i>
+          <a class="nav-link" href="#" matTooltip="Versão: 3.0.0" [matTooltipPosition]="'below'">
+            <i class="material-icons">code</i>
+            
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" matTooltip="Sair" [matTooltipPosition]="'below'">
+            <i class="material-icons">power_settings_new</i>
             
           </a>
         </li>
       </ul>
     </div>
   </div>
+  <button
+    type="button"
+    class="btn btn-primary btn-just-icon btn-round opacity"
+    id="btn-back-to-top"
+    (click)="navbar.scrollIntoView()"
+    >
+    <i class="material-icons">arrow_upward</i>
+  </button>
 </nav>

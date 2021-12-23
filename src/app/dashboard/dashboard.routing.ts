@@ -8,7 +8,18 @@ export const DashboardRoutes: Routes = [
       path: '',
       children: [ {
         path: 'dashboard',
-        component: DashboardComponent
+        component: DashboardComponent,
+        children:[
+          {
+          path: 'lancamentos',
+          loadChildren: () => import('./../tables/tables.module').then(m => m.TablesModule)
+          },
+          {
+            path: 'lancamento/individual',
+            loadChildren: () => import('../validationforms/validationforms.module').then(m => m.ValidationFormsModule)
+          }
+        ]
+
     }]
 }
 ];

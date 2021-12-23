@@ -29,13 +29,13 @@
                         <ul class="nav">
                             <li class="nav-item">
                                 <a href="javascript:void(0)" class="nav-link">
-                                    <span class="sidebar-mini">&nbsp;</span>
+                                    <span class="sidebar-mini"><i class="material-icons">how_to_reg</i></span>
                                     <span class="sidebar-normal">EDD_APROVADOR</span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="javascript:void(0)" class="nav-link">
-                                    <span class="sidebar-mini">&nbsp;</span>
+                                    <span class="sidebar-mini"><i class="material-icons">how_to_reg</i></span>
                                     <span class="sidebar-normal">EDD_MASTER</span>
                                 </a>
                             </li>
@@ -43,40 +43,7 @@
                     </div>
                 </div>
             </div>
-            <div *ngIf="isMobileMenu()">
-              <ul class="nav navbar-nav nav-mobile-menu">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <i class="material-icons">dashboard</i>
-                    <p>
-                      <span class="d-lg-none d-md-block">Stats</span>
-                    </p>
-                  </a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="material-icons">notifications</i>
-                    <span class="notification">3</span>
-                    <p>
-                      <span class="d-lg-none d-md-block">Some Actions</span>
-                    </p>
-                  </a>
-                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Mensagem de Negócio...</a>
-                    <a class="dropdown-item" href="#">Alerta de preenchimento</a>
-                    <a class="dropdown-item" href="#">Mensagem de erro</a>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <i class="material-icons">logout</i>
-                    <p>
-                      <span class="d-lg-none d-md-block">Account</span>
-                    </p>
-                  </a>
-                </li>
-              </ul>
-            </div>
+            
             <ul class="nav">
                 <li routerLinkActive="active" *ngFor="let menuitem of menuItems" class="nav-item">
                     <!--If is a single link-->
@@ -103,5 +70,39 @@
                     </div>
                 </li>
             </ul>
+            <div *ngIf="isMobileMenu()">
+              <ul class="nav navbar-nav nav-mobile-menu">
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="material-icons">notifications</i>
+                    <span class="notification">3</span>
+                    <p>
+                      <span class="d-lg-none d-md-block">Notificações</span>
+                    </p>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Mensagem de Negócio...</a>
+                    <a class="dropdown-item" href="#">Alerta de preenchimento</a>
+                    <a class="dropdown-item" href="#">Mensagem de erro</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="material-icons">code</i>
+                    <p>
+                      <span class="d-lg-none d-md-block">Versão: 3.0.0</span>
+                    </p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="material-icons">power_settings_new</i>
+                    <p>
+                      <span class="d-lg-none d-md-block">Sair</span>
+                    </p>
+                  </a>
+                </li>
+              </ul>
+            </div>
 
         </div>

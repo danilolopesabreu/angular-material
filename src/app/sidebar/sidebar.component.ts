@@ -28,14 +28,14 @@ export const ROUTES: RouteInfo[] = [{
         type: 'link',
         icontype: 'dashboard'
     },{
-        path: '/lancamentos',
+        path: '/lancamento',
         title: 'Lançamentos',
         type: 'sub',
         icontype: 'construction',
         collapse: 'components',
         children: [
-            {path: 'lote', title: 'Em Lote', ab:'LT', icontype:'apps'},
-            {path: 'individual', title: 'Individual', ab:'IND', icontype:'content_paste'}
+            {path: '#', title: 'Em Lote', ab:'LT', icontype:'apps'},
+            {path: 'individual', title: 'Lançamento Individual', ab:'IND', icontype:'content_paste'}
         ]
     },{
         path: '/consultas',
@@ -45,13 +45,13 @@ export const ROUTES: RouteInfo[] = [{
 
     },{
         path: '/configuracao',
-        title: 'Configuração',
+        title: 'Configurações',
         type: 'sub',
         icontype: 'settings',
         collapse: 'tables',
         children: [
-            {path: 'regular', title: 'Configurar Permissões', ab:'RT', icontype:'manage_accounts'},
-            {path: 'extended', title: 'Unidade x CIF', ab:'ET', icontype:'published_with_changes' }
+            {path: '#', title: 'Alçadas', ab:'RT', icontype:'manage_accounts'},
+            {path: '#', title: 'Unidade x CIF', ab:'ET', icontype:'published_with_changes' }
         ]
     }
 ];

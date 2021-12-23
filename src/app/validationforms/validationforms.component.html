@@ -1,0 +1,97 @@
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                  
+                    <form [formGroup]="register"  style="width: 50%;">
+
+                      <div class="card-header card-header-success card-header-icon">
+                        <div class="card-icon">
+                          <i class="material-icons">content_paste</i>
+                        </div>
+                        <h4 class="card-title">Novo Lançamento Individual</h4>
+                      </div>
+                        <div class="card-body">
+                        <br>                        
+
+                          <mat-form-field >
+                              <mat-select placeholder="Tipo de Lançamento *" 
+                                name="city" [ngClass]="{'has-success':validPasswordRegister===true}"
+                                formControlName="tipoLancamento">
+                                <mat-option *ngFor="let city of cities" [value]="city.value" >
+                                  {{ city.viewValue }}
+                                </mat-option>
+                              </mat-select>
+                              <app-field-error-display [displayError]="isFieldValid(register, 'password')" errorMsg="">
+                              </app-field-error-display>
+                          </mat-form-field>
+
+                          <mat-form-field class="example-full-width" [ngClass]="{'has-success':validEmailRegister===true}">
+                             <input
+                             type="email"
+                             matInput
+                             placeholder="CIF *"
+                             [errorStateMatcher]="matcher"
+                             formControlName="email"
+                             (ngModelChange)="emailValidationRegister($event)">
+                             <app-field-error-display [displayError]="isFieldValid(register, 'password')" errorMsg="">
+                            </app-field-error-display>
+                           </mat-form-field>
+
+                            <mat-form-field class="example-full-width has-label" [ngClass]="{'has-success':validPasswordRegister===true}">
+                              <input type="password"
+                              matInput
+                              id="password"
+                              placeholder="Unidade *"
+                              (ngModelChange)="passwordValidationRegister($event)"
+                              formControlName="password">
+                              <app-field-error-display [displayError]="isFieldValid(register, 'password')" errorMsg="">
+                              </app-field-error-display>
+                            </mat-form-field>
+
+                            <mat-form-field class="example-full-width has-label" [ngClass]="{'has-success':validConfirmPasswordRegister===true}" [ngClass]="displayFieldCss(register, 'password')">
+                              <input type="password"
+                              matInput
+                              id="confirmPassword"
+                              placeholder="Conta *"
+                              (ngModelChange)="confirmPasswordValidationRegister($event)"
+                              formControlName="confirmPassword">
+                              <app-field-error-display
+                               [displayError]="isFieldValid(register, 'confirmPassword')" errorMsg="">
+                              </app-field-error-display>
+                            </mat-form-field>
+
+                            <mat-form-field class="example-full-width has-label" [ngClass]="{'has-success':validConfirmPasswordRegister===true}" [ngClass]="displayFieldCss(register, 'password')">
+                              <input type="password"
+                              matInput
+                              id="confirmPassword"
+                              placeholder="Produto *"
+                              (ngModelChange)="confirmPasswordValidationRegister($event)"
+                              formControlName="confirmPassword">
+                              <app-field-error-display
+                               [displayError]="isFieldValid(register, 'confirmPassword')" errorMsg="">
+                              </app-field-error-display>
+                            </mat-form-field>
+                              
+
+                            <mat-form-field class="example-full-width" [ngClass]="{'has-success':validConfirmPasswordRegister===true}" [ngClass]="displayFieldCss(register, 'password')">
+                              <textarea matInput placeholder="Descrição do Lançamento *" formControlName="descricaoLancamento"></textarea>
+                              <app-field-error-display
+                               [displayError]="isFieldValid(register, 'confirmPassword')" errorMsg="">
+                              </app-field-error-display>
+                             </mat-form-field> 
+
+                            <div class="category form-category">* Campos Obrigatórios</div>
+
+                          </div>
+                            <div class="card-footer"> 
+                              <div class="stats">
+                                <button mat-raised-button type="submit" class="btn btn-rose">Cancelar</button>&nbsp;&nbsp;
+                                <button mat-raised-button type="submit" class="btn btn-success">Efetivar</button>
+                              </div>                            
+                            </div>
+                            
+                    </form>
+                </div>
+            
+            </div>
+         </div> 

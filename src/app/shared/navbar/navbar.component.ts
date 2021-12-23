@@ -12,7 +12,8 @@ const misc: any = {
 declare var $: any;
 @Component({
     selector: 'app-navbar-cmp',
-    templateUrl: 'navbar.component.html'
+    templateUrl: 'navbar.component.html',
+    styleUrls:['navbar.css']
 })
 
 export class NavbarComponent implements OnInit {
