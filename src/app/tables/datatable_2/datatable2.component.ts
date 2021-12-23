@@ -51,7 +51,7 @@ export class DataTable2Component implements OnInit, AfterViewInit {
         ],
         responsive: true,
         language: {
-          url: '../../../assets/js/data_table_pt_br.json'
+          url: './assets/js/data_table_pt_br.json'
         }
 
       });

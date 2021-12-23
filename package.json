@@ -1,15 +1,14 @@
 {
-  "name": "angular-material",
-  "version": "2.6.0",
-  "license": "https://demos.creative-tim.com/material-dashboard-pro-angular2/documentation/tutorial",
+  "name": "siedd",
+  "version": "3.0.0",
   "repository": {
-    "type": "git",
-    "url": "https://github.com/creativetimofficial/ct-material-dashboard-pro-angular.git"
+    "type": "git"
   },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:siedd-v3": "ng build --configuration production --base-href=./",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
