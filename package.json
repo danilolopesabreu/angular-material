@@ -8,7 +8,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:siedd-v3": "ng build --configuration production --base-href=./",
+    "build:siedd-v3": "ng build --configuration=production --output-hashing=all --base-href=./",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
