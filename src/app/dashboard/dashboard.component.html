@@ -150,7 +150,7 @@
               <button mat-raised-button class="btn btn-danger" 
                  matTooltip="Detalhar" [matTooltipPosition]="'below'"
                 [routerLink]="['/dashboard', 'lancamentos', 'pendentes']"
-                (click)="divRowAcoes.scrollIntoView()">
+                (click)="divRowAcoes.scrollIntoView({block: 'start', behavior: 'smooth'})">
                 <i class="material-icons">search</i> 
               </button>            
             </div>
