@@ -48,12 +48,10 @@ export class NavbarComponent implements OnInit {
           }, 300);
       }
 
-      // we simulate the window Resize so the charts will get updated in realtime.
       const simulateWindowResize = setInterval(function() {
           window.dispatchEvent(new Event('resize'));
       }, 180);
 
-      // we stop the simulation of Window Resize after the animations are completed
       setTimeout(function() {
           clearInterval(simulateWindowResize);
       }, 1000);
@@ -80,12 +78,10 @@ export class NavbarComponent implements OnInit {
           }, 300);
       }
 
-      // we simulate the window Resize so the charts will get updated in realtime.
       const simulateWindowResize = setInterval(function() {
           window.dispatchEvent(new Event('resize'));
       }, 180);
 
-      // we stop the simulation of Window Resize after the animations are completed
       setTimeout(function() {
           clearInterval(simulateWindowResize);
       }, 1000);
@@ -146,7 +142,7 @@ export class NavbarComponent implements OnInit {
             $layer.classList.add('visible');
         }, 100);
 
-        $layer.onclick = function() { //asign a function
+        $layer.onclick = function() { 
           body.classList.remove('nav-open');
           this.mobile_menu_visible = 0;
           this.sidebarVisible = false;
