@@ -7,7 +7,6 @@ import { MaterialModule } from '../app.module';
 import { TablesRoutes } from './tables.routing';
 
 import { ExtendedTableComponent } from './extendedtable/extendedtable.component';
-import { RegularTableComponent } from './regulartable/regulartable.component';
 import { DataTableComponent } from './datatable.net/datatable.component';
 import { DataTable2Component } from './datatable_2/datatable2.component';
 
@@ -22,8 +21,7 @@ import { DataTable2Component } from './datatable_2/datatable2.component';
   declarations: [
       ExtendedTableComponent,
       DataTableComponent,
-      DataTable2Component,
-      RegularTableComponent
+      DataTable2Component
   ]
 })
 

@@ -9,10 +9,6 @@ import { SelectModule } from 'ng2-select';
 import { MaterialModule } from '../app.module';
 import { FormsRoutes } from './forms.routing';
 
-import { ExtendedFormsComponent } from './extendedforms/extendedforms.component';
-import { RegularFormsComponent } from './regularforms/regularforms.component';
-import { WizardComponent } from './wizard/wizard.component';
-import { FieldErrorDisplayComponent } from '../validationforms/field-error-display/field-error-display.component';
 import { FieldErrorDisplayModule } from '../validationforms/field-error-display/field-error-display.module';
 
 
@@ -29,10 +25,7 @@ import { FieldErrorDisplayModule } from '../validationforms/field-error-display/
     FieldErrorDisplayModule
   ],
   declarations: [
-      FormComponent,
-      ExtendedFormsComponent,
-      RegularFormsComponent,
-      WizardComponent
+      FormComponent
   ]
 })
 

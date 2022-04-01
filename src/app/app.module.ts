@@ -41,11 +41,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { AppComponent } from './app.component';
 
 import { SidebarModule } from './sidebar/sidebar.module';
-import { FooterModule } from './shared/footer/footer.module';
 import { NavbarModule} from './shared/navbar/navbar.module';
-import { FixedpluginModule} from './shared/fixedplugin/fixedplugin.module';
 import { AdminLayoutComponent } from './layouts/admin/admin-layout.component';
-import { AuthLayoutComponent } from './layouts/auth/auth-layout.component';
 
 import { AppRoutes } from './app.routing';
 
@@ -97,14 +94,11 @@ export class MaterialModule {}
 
         MaterialModule,
         SidebarModule,
-        NavbarModule,
-        FooterModule,
-        FixedpluginModule
+        NavbarModule
     ],
     declarations: [
         AppComponent,
-        AdminLayoutComponent,
-        AuthLayoutComponent
+        AdminLayoutComponent
     ],
     providers : [
       MatNativeDateModule
